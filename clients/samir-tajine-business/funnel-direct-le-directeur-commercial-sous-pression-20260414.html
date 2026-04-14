@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indescale — Double ton pipeline B2B en 30 jours</title>
+  <meta name="description" content="Indescale aide les directeurs commerciaux B2B à doubler leurs rendez-vous qualifiés en 30 jours — sans SDR supplémentaire, sans enrichissement manuel, garanti ou remboursé.">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap');
+
+:root {
+  --primary: #1A1AFF;
+  --primary-dark: #0D0D2B;
+  --primary-light: #00E5CC;
+  --primary-rgb: 26,26,255;
+  --primary-10: rgba(26,26,255, 0.1);
+  --primary-20: rgba(26,26,255, 0.2);
+  --primary-30: rgba(26,26,255, 0.3);
+  --bg: #F5F5FF;
+  --surface: #F4F4F8;
+  --border: #E4E4EC;
+  --text: #111118;
+  --muted: #6B6B82;
+  --green: #25D366;
+  --blue: #60A5FA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+em, .italic-accent { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--primary); }
+::selection { background: var(--primary); color: var(--bg); }
+
+/* === Animations === */
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes pulse { 0%,100%{ box-shadow:0 0 0 0 rgba(26,26,255,0.44); } 50%{ box-shadow:0 0 0 12px rgba(26,26,255,0); } }
+@keyframes slideIn { from { opacity:0; transform:translateX(-20px); } to { opacity:1; transform:translateX(0); } }
+@keyframes shimmer { 0%{ background-position:-200% 0; } 100%{ background-position:200% 0; } }
+
+.fade-up { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards; }
+.fade-up-d1 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s forwards; opacity:0; }
+.fade-up-d2 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s forwards; opacity:0; }
+.fade-up-d3 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.3s forwards; opacity:0; }
+.fade-up-d4 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.4s forwards; opacity:0; }
+.animate { opacity:0; transform:translateY(24px); transition:opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+.animate.visible { opacity:1; transform:translateY(0); }
+
+/* === Gold CTA Button === */
+.gold-btn {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+  border: none; border-radius: 12px; cursor: pointer; letter-spacing: 0.3px;
+  transition: transform 0.2s, box-shadow 0.2s; text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.gold-btn::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  background-size: 200% 100%; animation: shimmer 3s infinite;
+}
+.gold-btn:hover { transform: scale(1.02); }
+.cta-pulse { animation: pulse 2s ease-in-out infinite; }
+
+input:focus { outline: none; }
+input:focus-visible { border-color: var(--primary) !important; box-shadow: 0 0 0 3px rgba(26,26,255,0.2); }
+
+/* === Step Indicator Dots === */
+.s-dot { width:8px; height:8px; border-radius:4px; background:rgba(255,255,255,0.15); transition:all 0.4s ease; }
+.s-dot.active { width:24px; background:var(--primary); }
+.s-dot.done { background:rgba(26,26,255,0.45); }
+    /* === Template spécifique Tunnel 1 === */
+    .t1-hero { min-height: calc(100vh - 60px); display:flex; flex-direction:column; align-items:center; padding:90px 24px 60px; position:relative; overflow:hidden; text-align:center; }
+    .t1-hero-glow { position:absolute; top:10%; left:50%; transform:translateX(-50%); width:700px; height:700px; border-radius:50%; background:radial-gradient(circle, var(--primary-10) 0%, transparent 70%); filter:blur(100px); pointer-events:none; z-index:0; }
+    .t1-inner { position:relative; z-index:1; width:100%; max-width:1000px; }
+    .t1-badge { display:inline-block; padding:5px 16px; border-radius:100px; border:1px solid var(--primary-30); background:var(--primary-10); font-size:11px; font-weight:600; color:var(--primary); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:16px; }
+    .t1-headline { font-size:clamp(26px,3.6vw,42px); font-weight:900; line-height:1.1; max-width:860px; margin:0 auto 12px; letter-spacing:-1.2px; }
+    .t1-subheadline { font-size:clamp(14px,1.3vw,16px); color:var(--muted); line-height:1.6; max-width:580px; margin:0 auto 28px; }
+    .t1-video { width:100%; max-width:900px; aspect-ratio:16/9; border-radius:20px; overflow:hidden; border:1px solid var(--primary-20); box-shadow:0 32px 80px rgba(0,0,0,0.6); background:#000; margin:0 auto 32px; }
+    .t1-video > iframe, .t1-video > div { width:100%; height:100%; border:none; }
+    .t1-cta-main { padding:20px 44px; font-size:17px; border-radius:14px; box-shadow:0 14px 44px var(--primary-30), 0 0 0 1px rgba(255,255,255,0.08) inset; margin-bottom:14px; font-weight:900; letter-spacing:0.2px; opacity:1; }
+    /* Force animation combinée pour éviter le conflit fade-up vs pulse */
+    .t1-cta-main.cta-pulse { animation: pulse 2s ease-in-out infinite; }
+    .t1-reassurance { display:flex; justify-content:center; gap:28px; flex-wrap:wrap; font-size:12px; color:var(--muted); }
+
+    /* Topbar CTA */
+    .t1-topbar-cta { padding:8px 18px; font-size:12px; border-radius:8px; }
+
+    /* Modal optin */
+    .t1-modal-backdrop { display:none; position:fixed; inset:0; z-index:500; background:rgba(0,0,0,0.85); backdrop-filter:blur(12px); align-items:center; justify-content:center; padding:20px; }
+    .t1-modal-backdrop.open { display:flex; }
+    .t1-modal { background:var(--surface); border:1px solid var(--primary-30); border-radius:24px; padding:40px 36px; max-width:480px; width:100%; position:relative; max-height:92vh; overflow-y:auto; animation:fadeUp 0.3s ease; }
+    .t1-modal input { width:100%; padding:14px 16px; margin-bottom:10px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.4); color:var(--text); font-size:14px; outline:none; }
+    .t1-modal input:focus-visible { border-color:var(--primary); box-shadow:0 0 0 3px var(--primary-20); }
+
+    /* Overlay post-optin (Calendly) */
+    .t1-post { display:none; position:fixed; inset:0; z-index:400; background:var(--bg); overflow-y:auto; padding:80px 24px; }
+    .t1-post.open { display:block; }
+
+    /* Sticky WhatsApp */
+    .wa-sticky { position:fixed; bottom:20px; right:20px; width:56px; height:56px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 12px 32px rgba(37,211,102,0.4); z-index:300; cursor:pointer; transition:transform 0.2s; animation:pulse 2.5s ease-in-out infinite; text-decoration:none; color:white; font-size:26px; }
+    .wa-sticky:hover { transform:scale(1.08); }
+
+    @media (max-width:768px) {
+      .t1-cta-main { padding:18px 32px; font-size:16px; }
+      .t1-hero { padding:80px 16px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div id="topbar" style="position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 24px;background:rgba(245,245,255,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+  <div style="display:flex;align-items:center;gap:10px">
+    <div style="width:30px;height:30px;border-radius:6px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:var(--bg)">I</div>
+    <span style="font-size:15px;font-weight:700">Indescale</span>
+  </div>
+  <button onclick="openOperoModal()" class="gold-btn t1-topbar-cta">Voir comment ça marche pour mon équipe</button>
+</div>
+
+<!-- Hero + VSL + CTA principal -->
+<section class="t1-hero">
+  <div class="t1-hero-glow"></div>
+  <div class="t1-inner">
+    <span class="t1-badge fade-up">Accès limité · 10 onboardings accompagnés par mois</span>
+    <h1 class="t1-headline fade-up-d1">
+      Ton pipeline ne se remplit pas tout seul. Encore pour combien de temps ?<br><em>combien de temps ?</em>
+    </h1>
+    <p class="t1-subheadline fade-up-d2">Pour les directeurs commerciaux B2B qui en ont marre de voir leur équipe chercher des leads plutôt que les closer — double tes rendez-vous qualifiés en 30 jours, sans recruter un SDR de plus.</p>
+
+    <!-- VSL visible direct, pas gatée -->
+    <div class="t1-video fade-up-d3"><div style="display:flex;align-items:center;justify-content:center;color:#444;font-size:13px;background:#000;width:100%;height:100%">[ Vidéo VSL — colle l'URL ou l'embed dans le configurateur ]</div></div>
+
+    <!-- CTA principal — même texte que topbar + final. Pas de fade-up (conflit avec pulse). -->
+    <button onclick="openOperoModal()" class="gold-btn cta-pulse t1-cta-main">
+      Voir comment ça marche pour mon équipe
+    </button>
+
+    <!-- Réassurance sous le CTA -->
+    <div class="t1-reassurance">
+      <span>⏱ 30 min</span>
+      <span>🎯 Analyse personnalisée</span>
+      <span>⭐ 4.9/5</span>
+    </div>
+
+    
+  </div>
+</section>
+
+
+
+<!-- Témoignages -->
+
+<section style="padding:80px 24px;max-width:1000px;margin:0 auto;position:relative;z-index:1">
+  <h2 style="text-align:center;font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-1px;margin-bottom:40px">
+    Ils ont déjà <em>transformé</em> leur business
+  </h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+    <div class="animate" style="padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--border)">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px;flex-wrap:wrap">
+      <div>
+        <div style="font-size:13px;font-weight:700">Romain Castelli</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px">Head of Sales, SaaS RH — 45 personnes</div>
+      </div>
+      <span style="padding:3px 10px;border-radius:100px;background:var(--primary-20);font-size:11px;font-weight:700;color:var(--primary);white-space:nowrap">+2,4x de rendez-vous qualifiés en 5 semaines</span>
+    </div>
+    <p style="font-size:13px;color:var(--muted);line-height:1.7;font-style:italic">"Mon équipe passait le dimanche soir à préparer les listes du lundi. Aujourd&#39;hui ce temps n&#39;existe plus. Le pipeline tourne, et moi je gère les deals — pas les tableurs."</p>
+    <div style="color:var(--primary);font-size:13px;margin-top:10px">★★★★★</div>
+  </div>
+<div class="animate" style="padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--border)">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px;flex-wrap:wrap">
+      <div>
+        <div style="font-size:13px;font-weight:700">Laura Fontaine</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px">Directrice Commerciale, scale-up Fintech B2B</div>
+      </div>
+      <span style="padding:3px 10px;border-radius:100px;background:var(--primary-20);font-size:11px;font-weight:700;color:var(--primary);white-space:nowrap">68 % de temps d&#39;enrichissement manuel en moins dès le premier mois</span>
+    </div>
+    <p style="font-size:13px;color:var(--muted);line-height:1.7;font-style:italic">"On avait déjà cramé un domaine avec un autre outil. J&#39;avais juré de ne plus jamais tenter l&#39;automatisation. Là c&#39;est différent — le warm-up est intégré, les limites sont gérées, et nos taux d&#39;ouverture dépassent les 47 %."</p>
+    <div style="color:var(--primary);font-size:13px;margin-top:10px">★★★★★</div>
+  </div>
+<div class="animate" style="padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--border)">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px;flex-wrap:wrap">
+      <div>
+        <div style="font-size:13px;font-weight:700">Alexis Morin</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px">VP Sales, ETI industrielle B2B — 180 personnes</div>
+      </div>
+      <span style="padding:3px 10px;border-radius:100px;background:var(--primary-20);font-size:11px;font-weight:700;color:var(--primary);white-space:nowrap">Pipeline multiplié par 2,8 en 6 semaines, adoption équipe à 91 %</span>
+    </div>
+    <p style="font-size:13px;color:var(--muted);line-height:1.7;font-style:italic">"Mon VP me demandait comment on allait remonter le pipe ce trimestre. Maintenant c&#39;est moi qui lui montre le dashboard. L&#39;équipe l&#39;utilise vraiment — ce qui n&#39;était pas le cas avec les 3 outils d&#39;avant."</p>
+    <div style="color:var(--primary);font-size:13px;margin-top:10px">★★★★★</div>
+  </div>
+  </div>
+</section>
+
+
+<!-- CTA final — même bouton, même texte -->
+<section style="padding:60px 24px;text-align:center;position:relative;z-index:1">
+  <h2 style="font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-0.5px;margin-bottom:12px">
+    Prêt à <em>passer à l'action</em> ?
+  </h2>
+  <p style="color:var(--muted);margin-bottom:28px;font-size:14px">
+    Le meilleur moment, c'est maintenant. Le 2ème, c'est aussi maintenant.
+  </p>
+  <button onclick="openOperoModal()" class="gold-btn cta-pulse" style="padding:18px 44px;font-size:17px;border-radius:14px">
+    Voir comment ça marche pour mon équipe
+  </button>
+</section>
+
+<!-- Modal optin -->
+<div id="operoFormModal" class="t1-modal-backdrop" onclick="if(event.target===this)closeOperoModal()">
+  <div class="t1-modal">
+    <button onclick="closeOperoModal()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:28px;color:var(--muted);cursor:pointer;line-height:1">×</button>
+    <p style="font-size:11px;color:var(--primary);font-weight:700;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:8px">ÉTAPE 1/2</p>
+    <h3 style="font-size:22px;font-weight:800;text-align:center;margin-bottom:6px;line-height:1.3;letter-spacing:-0.5px">Accède au calendrier</h3>
+    <p style="color:var(--muted);font-size:13px;text-align:center;margin-bottom:24px">Laisse tes coordonnées, le calendrier s'ouvre juste après.</p>
+    
+    <input id="operoPrenom" type="text" placeholder="Ton prénom">
+    <input id="operoEmail" type="email" placeholder="Ton email pro">
+    <input id="operoPhone" type="tel" placeholder="Ton téléphone">
+    <button onclick="submitOperoOptin()" class="gold-btn cta-pulse" style="width:100%;padding:16px;margin-top:6px;font-size:15px;border-radius:12px">
+      Voir comment ça marche pour mon équipe
+    </button>
+    <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:16px">🔒 Confidentiel · Désinscription 1 clic</p>
+  </div>
+</div>
+
+<!-- Overlay post-optin : Calendly -->
+<div id="operoPostBooking" class="t1-post">
+  <div style="max-width:760px;margin:0 auto;text-align:center">
+    <div class="fade-up" style="margin-bottom:20px">
+      <span style="display:inline-block;padding:6px 18px;border-radius:100px;border:1px solid var(--primary-30);background:var(--primary-10);font-size:12px;font-weight:600;color:var(--primary);letter-spacing:1px;text-transform:uppercase">Étape 2/2</span>
+    </div>
+    <h2 class="fade-up-d1" style="font-size:clamp(24px,3vw,36px);font-weight:800;letter-spacing:-1px;margin-bottom:12px">
+      Choisis ton <em>créneau</em>
+    </h2>
+    <p class="fade-up-d2" style="color:var(--muted);margin-bottom:32px">30 minutes pour analyser ta situation et construire ton plan.</p>
+    <div class="fade-up-d3" style="width:100%;min-height:500px;border-radius:16px;border:1px solid var(--primary-20);background:var(--surface);overflow:hidden">
+      <div style="display:flex;align-items:center;justify-content:center;color:#444;font-size:13px;min-height:500px">[ Widget Calendly — colle l'URL ou l'embed dans le configurateur ]</div>
+    </div>
+    <button onclick="closeOperoPostBooking()" style="margin-top:24px;padding:10px 24px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;cursor:pointer">← Retour à la page</button>
+  </div>
+</div>
+
+
+
+<footer style="padding:24px;border-top:1px solid var(--border);text-align:center;position:relative;z-index:1">
+    <p style="font-size:11px;color:var(--muted);opacity:0.6">© 2026  — Tous droits réservés</p>
+    <p style="font-size:10px;color:var(--muted);opacity:0.4;margin-top:6px">Produit par OPERO · Growth Operator Agency</p>
+  </footer>
+
+<script>
+(function(){
+  const modal = document.getElementById('operoFormModal');
+  const post = document.getElementById('operoPostBooking');
+  window.openOperoModal = function(){ modal.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  window.closeOperoModal = function(){ modal.classList.remove('open'); document.body.style.overflow = ''; };
+  window.closeOperoPostBooking = function(){ post.classList.remove('open'); document.body.style.overflow = ''; };
+
+  
+  window.operoSubmitLead = function(data){
+    data = data || {};
+    var payload = {
+      clientSlug: "Samir Tajine Business",
+      email: data.email || '',
+      prenom: data.prenom || '',
+      nom: data.nom || '',
+      phone: data.phone || '',
+      source: "Tunnel Direct — Indescale",
+      segmentName: data.segmentName || '',
+      tagSource: "",
+      rawData: data.rawData || null
+    };
+    var url = "https://mljpxzpovrjceibzevwa.supabase.co/functions/v1/lead-ingest";
+    var anon = "sb_publishable_-GQb7ksP4eajkzXRCiSAjw_3gi4YJ1w";
+    var hasIngest = !!(url && payload.clientSlug && payload.email);
+    // HTTP ingest (prod — landing déployée publiquement OU preview)
+    if (hasIngest) {
+      try {
+        fetch(url, {
+          method: 'POST',
+          headers: (function(h){ h['Content-Type']='application/json'; if (anon){h['apikey']=anon; h['Authorization']='Bearer '+anon;} return h; })({}),
+          body: JSON.stringify(payload),
+          keepalive: true
+        }).catch(function(){ /* silencieux — la postMessage sert de fallback si HTTP échoue */ });
+      } catch(e){}
+    }
+    // postMessage : toujours émis vers le parent si on est en iframe.
+    // Le flag viaSupabase=true évite que le parent duplique le lead en
+    // localStorage quand l'HTTP ingest est déjà configuré — il sert juste
+    // de notification UI instantanée.
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({
+          type: 'opero:lead-submit',
+          source: payload.source,
+          data: payload,
+          viaSupabase: hasIngest
+        }, '*');
+      }
+    } catch(e){}
+  };
+
+  window.submitOperoOptin = function(){
+    const prenom = document.getElementById('operoPrenom')?.value || '';
+    const email = document.getElementById('operoEmail')?.value || '';
+    const phone = document.getElementById('operoPhone')?.value || '';
+    if (!email && !document.querySelector('[data-embed]')) {
+      alert('Email requis');
+      return;
+    }
+    window.operoSubmitLead({ prenom, email, phone });
+    if (typeof fbq !== 'undefined') fbq('track','Lead');
+    modal.classList.remove('open');
+    post.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    // Reset
+    ['operoPrenom','operoEmail','operoPhone'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+  };
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { closeOperoModal(); closeOperoPostBooking(); }
+  });
+
+  // Scroll reveal
+  try {
+    const obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) en.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate').forEach(function(el){ obs.observe(el); });
+  } catch(e){}
+})();
+</script>
+</body>
+</html>
