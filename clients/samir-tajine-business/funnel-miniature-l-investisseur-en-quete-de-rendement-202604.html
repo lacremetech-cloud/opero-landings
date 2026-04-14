@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investir au Maroc depuis l&#39;Europe — Méthode MRE 2025</title>
+  <meta name="description" content="Tu veux diversifier avec un bien locatif au Maroc ? Découvre les zones à fort rendement, le financement MRE et la gestion à distance. Méthode Tajine Business.">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap');
+
+:root {
+  --primary: #C8102E;
+  --primary-dark: #006233;
+  --primary-light: #FFD700;
+  --primary-rgb: 200,16,46;
+  --primary-10: rgba(200,16,46, 0.1);
+  --primary-20: rgba(200,16,46, 0.2);
+  --primary-30: rgba(200,16,46, 0.3);
+  --bg: #FFFFFF;
+  --surface: #F4F4F8;
+  --border: #E4E4EC;
+  --text: #1A1A1A;
+  --muted: #6B6B82;
+  --green: #25D366;
+  --blue: #60A5FA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+em, .italic-accent { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--primary); }
+::selection { background: var(--primary); color: var(--bg); }
+
+/* === Animations === */
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes pulse { 0%,100%{ box-shadow:0 0 0 0 rgba(200,16,46,0.44); } 50%{ box-shadow:0 0 0 12px rgba(200,16,46,0); } }
+@keyframes slideIn { from { opacity:0; transform:translateX(-20px); } to { opacity:1; transform:translateX(0); } }
+@keyframes shimmer { 0%{ background-position:-200% 0; } 100%{ background-position:200% 0; } }
+
+.fade-up { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards; }
+.fade-up-d1 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s forwards; opacity:0; }
+.fade-up-d2 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s forwards; opacity:0; }
+.fade-up-d3 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.3s forwards; opacity:0; }
+.fade-up-d4 { animation: fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.4s forwards; opacity:0; }
+.animate { opacity:0; transform:translateY(24px); transition:opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+.animate.visible { opacity:1; transform:translateY(0); }
+
+/* === Gold CTA Button === */
+.gold-btn {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800;
+  border: none; border-radius: 12px; cursor: pointer; letter-spacing: 0.3px;
+  transition: transform 0.2s, box-shadow 0.2s; text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.gold-btn::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  background-size: 200% 100%; animation: shimmer 3s infinite;
+}
+.gold-btn:hover { transform: scale(1.02); }
+.cta-pulse { animation: pulse 2s ease-in-out infinite; }
+
+input:focus { outline: none; }
+input:focus-visible { border-color: var(--primary) !important; box-shadow: 0 0 0 3px rgba(200,16,46,0.2); }
+
+/* === Step Indicator Dots === */
+.s-dot { width:8px; height:8px; border-radius:4px; background:rgba(255,255,255,0.15); transition:all 0.4s ease; }
+.s-dot.active { width:24px; background:var(--primary); }
+.s-dot.done { background:rgba(200,16,46,0.45); }
+    .t3-step { display:none; }
+    .t3-step.active { display:block; }
+    /* ── Hero 60/40 — no-scroll ─────────────────────────────────────── */
+    .t3-hero { min-height:calc(100vh - 60px); display:flex; flex-direction:column; justify-content:center; padding:80px 24px 32px; position:relative; overflow:hidden; }
+    .t3-hero-glow { position:absolute; top:15%; left:20%; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,var(--primary-10) 0%,transparent 70%); filter:blur(80px); pointer-events:none; z-index:0; }
+    .t3-two-cols { position:relative; z-index:1; display:grid; grid-template-columns:3fr 2fr; gap:48px; align-items:center; max-width:1120px; margin:0 auto; width:100%; }
+    @media(max-width:900px) { .t3-two-cols { grid-template-columns:1fr; gap:28px; } }
+    .t3-badge { display:inline-block; padding:5px 14px; border-radius:100px; border:1px solid var(--primary-30); background:var(--primary-10); font-size:10px; font-weight:600; color:var(--primary); letter-spacing:1.2px; text-transform:uppercase; margin-bottom:14px; }
+    .t3-headline { font-size:clamp(28px,3.6vw,44px); font-weight:900; line-height:1.08; margin-bottom:14px; letter-spacing:-1.2px; }
+    .t3-subheadline { font-size:clamp(14px,1.35vw,17px); color:var(--muted); line-height:1.6; margin-bottom:24px; max-width:520px; }
+    .t3-reassure { font-size:12px; color:var(--muted); margin-top:12px; text-align:center; }
+    /* Miniature colonne droite : max 280px de large, centrée */
+    .t3-thumb-wrap { display:flex; justify-content:center; align-items:center; width:100%; }
+    .t3-thumb { position:relative; aspect-ratio:16/9; border-radius:16px; overflow:hidden; border:none; cursor:pointer; padding:0; background:linear-gradient(135deg,#1a1a1a,#0a0a0a); width:100%; max-width:280px; transition:transform 0.3s, box-shadow 0.3s; }
+    .t3-thumb:hover { transform:scale(1.03); box-shadow:0 24px 64px rgba(0,0,0,0.6); }
+    .t3-thumb:hover .play-btn { transform:scale(1.1); }
+    .play-btn { width:56px; height:56px; border-radius:50%; background:var(--primary); display:flex; align-items:center; justify-content:center; box-shadow:0 12px 36px var(--primary-30); transition:transform 0.3s; }
+    .t3-live-badge { position:absolute; top:10px; left:10px; padding:3px 8px; border-radius:5px; background:rgba(220,38,38,0.95); color:#fff; font-size:10px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; display:flex; align-items:center; gap:5px; }
+    .t3-live-badge::before { content:''; width:6px; height:6px; border-radius:50%; background:#fff; animation:pulse 1.5s ease-in-out infinite; }
+    /* ── 3 points clés (below fold) ─────────────────────────────────── */
+    .t3-points { padding:80px 24px 56px; max-width:1000px; margin:0 auto; }
+    .t3-points h2 { text-align:center; font-size:clamp(24px,2.8vw,34px); font-weight:800; letter-spacing:-0.8px; margin-bottom:12px; }
+    .t3-points .sub { text-align:center; color:var(--muted); font-size:14px; margin-bottom:36px; }
+    .t3-points-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    @media(max-width:720px) { .t3-points-grid { grid-template-columns:1fr; gap:14px; } }
+    .t3-point-card { padding:26px 22px; border-radius:14px; background:var(--surface); border:1px solid var(--border); text-align:left; transition:border-color 0.3s, transform 0.3s; }
+    .t3-point-card:hover { border-color:var(--primary-30); transform:translateY(-2px); }
+    .t3-point-icon { font-size:26px; margin-bottom:10px; display:inline-block; }
+    .t3-point-title { font-size:15px; font-weight:700; margin-bottom:6px; line-height:1.3; }
+    .t3-point-desc { font-size:13px; color:var(--muted); line-height:1.55; }
+    /* CTA intermédiaire + final */
+    .t3-cta-mid { padding:24px 24px 64px; text-align:center; }
+    .t3-cta-mid .t3-cta-main { min-width:260px; }
+    .t3-modal-backdrop { display:none; position:fixed; inset:0; z-index:500; background:rgba(0,0,0,0.85); backdrop-filter:blur(12px); align-items:center; justify-content:center; padding:20px; }
+    .t3-modal-backdrop.open { display:flex; }
+    .t3-modal { background:var(--surface); border:1px solid var(--primary-30); border-radius:24px; padding:40px 36px; max-width:480px; width:100%; position:relative; max-height:92vh; overflow-y:auto; animation:fadeUp 0.3s ease; }
+    .t3-modal input { width:100%; padding:14px 16px; margin-bottom:10px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.4); color:var(--text); font-size:14px; outline:none; }
+    .t3-modal input:focus-visible { border-color:var(--primary); box-shadow:0 0 0 3px var(--primary-20); }
+    .t3-cta-main { padding:18px 40px; font-size:15px; border-radius:14px; box-shadow:0 12px 40px var(--primary-30); opacity:1; font-weight:800; }
+    .t3-cta-main.cta-pulse { animation:pulse 2s ease-in-out infinite; }
+    .wa-sticky { position:fixed; bottom:20px; right:20px; width:56px; height:56px; border-radius:50%; background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 12px 32px rgba(37,211,102,0.4); z-index:300; cursor:pointer; animation:pulse 2.5s ease-in-out infinite; text-decoration:none; color:white; font-size:26px; }
+    .s-dot { width:8px; height:8px; border-radius:4px; background:rgba(255,255,255,0.15); transition:all 0.4s ease; }
+    .s-dot.active { width:24px; background:var(--primary); }
+    .s-dot.done { background:var(--primary-30); }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div id="topbar" style="position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 24px;background:rgba(255,255,255,0.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+  <div style="display:flex;align-items:center;gap:10px">
+    <div style="width:30px;height:30px;border-radius:6px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:var(--bg)">T</div>
+    <span style="font-size:15px;font-weight:700">Tajine Business</span>
+  </div>
+  <button id="navCta" onclick="goToStep('booking')" style="display:none;padding:8px 18px;border-radius:8px;border:none;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--bg);font-size:12px;font-weight:700;cursor:pointer;font-family:inherit">
+    Voir la présentation gratuite
+  </button>
+</div>
+
+<!-- STEP 1 : OPTIN 2 COLONNES (60/40 — no-scroll respectée) -->
+<div id="step-optin" class="t3-step active">
+  <!-- ══ HERO ABOVE THE FOLD ══════════════════════════════════════════ -->
+  <section class="t3-hero">
+    <div class="t3-hero-glow"></div>
+    <div class="t3-two-cols">
+      <!-- Colonne gauche 60% : promesse + CTA plein largeur + réassurance -->
+      <div class="fade-up">
+        <span class="t3-badge">Formation privée · Spécial MRE investisseurs · Places limitées à 50</span>
+        <h1 class="t3-headline fade-up-d1">
+          Quel rendement locatif tu peux vraiment tirer<br><em>au Maroc en 2025</em>
+        </h1>
+        <p class="t3-subheadline fade-up-d2">Pour les MRE déjà propriétaires en Europe qui veulent diversifier avec un bien locatif au Maroc — et encaisser des revenus en dirhams, gérés à distance, sans réseau local.</p>
+        <button onclick="openOperoModal()" class="gold-btn cta-pulse t3-cta-main fade-up-d3" style="width:100%;display:block">
+          Voir la présentation gratuite
+        </button>
+        <p class="fade-up-d3 t3-reassure">🔒 100% gratuit · Sans carte · Sans engagement</p>
+        
+      </div>
+      <!-- Colonne droite 40% : miniature max 280px cliquable -->
+      <div class="t3-thumb-wrap fade-up-d2">
+        <button onclick="openOperoModal()" class="t3-thumb" aria-label="Voir la présentation">
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,#2a1a05,#0f0a02);display:flex;align-items:center;justify-content:center;font-size:72px;opacity:0.15">🎬</div>
+          <div class="t3-live-badge">LIVE</div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center">
+            <div class="play-btn"><span style="font-size:24px;color:var(--bg);margin-left:4px">▶</span></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- ══ BELOW FOLD 1 : 3 points clés ═════════════════════════════════ -->
+  
+  <section class="t3-points">
+    <h2>Ce que tu vas découvrir</h2>
+    <p class="sub">Les 3 piliers de la masterclass</p>
+    <div class="t3-points-grid"><div class="t3-point-card animate">
+          <div class="t3-point-icon">🎯</div>
+          <div class="t3-point-title">Les villes marocaines où le rendement locatif…</div>
+          <div class="t3-point-desc">et celles à éviter absolument</div>
+        </div><div class="t3-point-card animate">
+          <div class="t3-point-icon">⚡</div>
+          <div class="t3-point-title">Comment financer ton achat depuis la France…</div>
+          
+        </div><div class="t3-point-card animate">
+          <div class="t3-point-icon">📈</div>
+          <div class="t3-point-title">La méthode pour comparer les prix au…</div>
+          <div class="t3-point-desc">avec les données de marché réelles 2025</div>
+        </div></div>
+  </section>
+
+  <!-- ══ BELOW FOLD 2 : CTA intermédiaire ═════════════════════════════ -->
+  <section class="t3-cta-mid">
+    <button onclick="openOperoModal()" class="gold-btn cta-pulse t3-cta-main">Voir la présentation gratuite</button>
+    <p class="t3-reassure">🔒 Gratuit · Sans engagement</p>
+  </section>
+
+  <!-- ══ BELOW FOLD 3 : Témoignages ═══════════════════════════════════ -->
+  
+  <section style="padding:40px 24px;max-width:900px;margin:0 auto">
+    <h2 style="text-align:center;font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-0.8px;margin-bottom:28px">Les résultats <em>parlent</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px"><div class="animate" style="padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--border)">
+    <p style="font-size:13px;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:12px">"J&#39;avais déjà mon appart en France et je cherchais à diversifier. Je comparais les chiffres depuis des mois mais je ne savais pas quelles villes croyaient vraiment. Grâce à la méthode Tajine Business, j&#39;ai acheté un T3 à Agadir avec 18 000€ d&#39;apport. Aujourd&#39;hui je touche mes loyers chaque mois sans avoir à appeler qui que ce soit là-bas."</p>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+      <div><div style="font-size:12px;font-weight:700">Yasmine B.</div><div style="font-size:10px;color:var(--muted)">Ingénieure, propriétaire en région parisienne</div></div>
+      <span style="padding:3px 10px;border-radius:100px;background:var(--primary-20);font-size:10px;font-weight:700;color:var(--primary)">7,8% de rendement brut sur un appartement à Agadir, géré 100% à distance</span>
+    </div>
+  </div>
+<div class="animate" style="padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--border)">
+    <p style="font-size:13px;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:12px">"Mon blocage c&#39;était la gestion à distance. J&#39;ai pas de famille de confiance au Maroc pour ça. Samir m&#39;a connecté directement à un gestionnaire locatif à Casablanca — contrat, état des lieux, loyers virés. Je supervise depuis mon téléphone. Honnêtement je gère moins de stress que avec mon locataire en France."</p>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+      <div><div style="font-size:12px;font-weight:700">Rachid M.</div><div style="font-size:10px;color:var(--muted)">Chef de projet IT, Lyon — propriétaire en France depuis 2019</div></div>
+      <span style="padding:3px 10px;border-radius:100px;background:var(--primary-20);font-size:10px;font-weight:700;color:var(--primary)">Achat bouclé en 74 jours, rendement estimé à 6,5% net après charges</span>
+    </div>
+  </div>
+<div class="animate" style="padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--border)">
+    <p style="font-size:13px;color:var(--muted);line-height:1.7;font-style:italic;margin-bottom:12px">"Je suis orientée chiffres, j&#39;avais besoin de données réelles pas de belles promesses. Le guide Maroc 2025 m&#39;a donné exactement ce que je cherchais : comparatifs de marchés, prix par zone, projections locatives. J&#39;ai validé mon deuxième achat à Marrakech en m&#39;appuyant sur les contacts notaires du réseau. Zéro mauvaise surprise."</p>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+      <div><div style="font-size:12px;font-weight:700">Soraya K.</div><div style="font-size:10px;color:var(--muted)">Pharmacienne, Bruxelles — investit en immobilier depuis 2017</div></div>
+      <span style="padding:3px 10px;border-radius:100px;background:var(--primary-20);font-size:10px;font-weight:700;color:var(--primary)">Portefeuille de 2 biens au Maroc — rendement moyen 8,1% brut sur les 2 actifs</span>
+    </div>
+  </div></div>
+  </section>
+
+  <!-- ══ BELOW FOLD 4 : CTA final ═════════════════════════════════════ -->
+  <section style="padding:40px 24px 80px;text-align:center">
+    <h2 style="font-size:clamp(20px,2.4vw,28px);font-weight:800;letter-spacing:-0.5px;margin-bottom:10px">Prêt à <em>passer à l'action</em> ?</h2>
+    <p style="color:var(--muted);margin-bottom:22px;font-size:13px">L'équipe prend 3 candidatures par semaine.</p>
+    <button onclick="openOperoModal()" class="gold-btn cta-pulse t3-cta-main">Voir la présentation gratuite</button>
+  </section>
+</div>
+
+<!-- MODAL OPTIN -->
+<div id="operoFormModal" class="t3-modal-backdrop" onclick="if(event.target===this)closeOperoModal()">
+  <div class="t3-modal">
+    <button onclick="closeOperoModal()" style="position:absolute;top:14px;right:18px;background:none;border:none;font-size:28px;color:var(--muted);cursor:pointer;line-height:1">×</button>
+    <p style="font-size:11px;color:var(--primary);font-weight:700;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:8px">CANDIDATURE GRATUITE</p>
+    <h3 style="font-size:22px;font-weight:800;text-align:center;margin-bottom:6px;line-height:1.3;letter-spacing:-0.5px">Accède à la présentation</h3>
+    <p style="color:var(--muted);font-size:13px;text-align:center;margin-bottom:24px">10 minutes · Gratuit · Sans engagement</p>
+    
+    <input id="operoPrenom" type="text" placeholder="Ton prénom">
+    <input id="operoEmail" type="email" placeholder="Ton email pro">
+    <input id="operoPhone" type="tel" placeholder="Ton téléphone">
+    <button onclick="submitOperoOptin()" class="gold-btn cta-pulse t3-cta-main" style="width:100%;padding:16px;margin-top:6px;font-size:15px;border-radius:12px">
+      Voir la présentation gratuite
+    </button>
+    <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:16px">🔒 Confidentiel · Désinscription 1 clic</p>
+  </div>
+</div>
+
+<!-- STEP 2 : VSL -->
+<div id="step-vsl" class="t3-step">
+  <section style="min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:80px 24px 60px">
+    <div class="fade-up" style="text-align:center;margin-bottom:24px;max-width:700px">
+      <p id="greetingLine" style="font-size:12px;color:var(--primary);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Tajine Business — Masterclass privée</p>
+      <h2 style="font-size:clamp(22px,3.5vw,36px);font-weight:800;letter-spacing:-1px">Regarde jusqu'au bout <em>la méthode</em></h2>
+    </div>
+    <div class="fade-up-d1" style="width:100%;max-width:800px;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid var(--primary-20);box-shadow:0 32px 80px rgba(0,0,0,0.6);background:#000;margin-bottom:32px"><div style="display:flex;align-items:center;justify-content:center;color:#444;font-size:13px;background:#000;width:100%;height:100%">[ Vidéo VSL ]</div></div>
+    <div id="videoCta" style="display:none;text-align:center;max-width:500px">
+      <p style="font-size:14px;color:var(--muted);margin-bottom:16px">Tu es éligible pour un coaching stratégique offert.</p>
+      <button onclick="goToStep('booking')" class="gold-btn cta-pulse" style="padding:18px 48px;font-size:17px;border-radius:14px">
+        Voir la présentation gratuite
+      </button>
+    </div>
+  </section>
+</div>
+
+<!-- STEP 3 : BOOKING -->
+<div id="step-booking" class="t3-step">
+  <section style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px 60px;text-align:center">
+    <h2 class="fade-up" style="font-size:clamp(26px,4vw,44px);font-weight:800;letter-spacing:-1px;max-width:700px;margin-bottom:12px">Réserve ton <em>coaching</em></h2>
+    <p class="fade-up-d1" style="color:var(--muted);max-width:500px;line-height:1.7;margin-bottom:40px">30 minutes pour analyser ta situation.</p>
+    <div class="fade-up-d2" style="width:100%;max-width:700px;min-height:500px;border-radius:16px;border:1px solid var(--primary-20);background:var(--surface);overflow:hidden"><div style="display:flex;align-items:center;justify-content:center;color:#444;font-size:13px;min-height:500px">[ Widget Calendly ]</div></div>
+  </section>
+</div>
+
+<!-- STEP 4 : CONFIRMATION -->
+<div id="step-confirmation" class="t3-step">
+  <section style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 24px;text-align:center">
+    <div class="fade-up" style="font-size:64px;margin-bottom:20px">✅</div>
+    <h2 class="fade-up-d1" style="font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-1px;margin-bottom:12px"><span id="confirmGreeting"></span>Ta présentation est réservée — voici la suite</h2>
+    <div class="fade-up-d3" style="width:100%;max-width:500px;display:flex;flex-direction:column;gap:16px;text-align:left;margin-top:20px">
+      <div style="padding:24px;border-radius:14px;background:var(--surface);border:1px solid var(--border);display:flex;gap:20px;align-items:center"><div style="font-size:36px">📅</div><div style="flex:1"><h3 style="font-size:14px;font-weight:700;margin-bottom:4px;color:var(--primary)">ÉTAPE #1</h3><p style="font-size:13px;color:var(--muted)">Vérifie ta boîte mail : tu vas recevoir dans les 5 prochaines minutes le lien d&#39;accès à la présentation + le Guide Immobilier Maroc 2025 en téléchargement immédiat.</p></div></div>
+      <div style="padding:24px;border-radius:14px;background:linear-gradient(135deg,rgba(37,211,102,0.12),rgba(37,211,102,0.04));border:1px solid rgba(37,211,102,0.3);display:flex;gap:20px;align-items:center"><div style="font-size:36px">💬</div><div style="flex:1"><h3 style="font-size:14px;font-weight:700;margin-bottom:4px;color:#25D366">ÉTAPE #2</h3><p style="font-size:13px;color:var(--muted);margin-bottom:12px">Regarde la présentation jusqu&#39;au bout — elle dure 45 minutes et contient les données de marché 2025, les stratégies de financement MRE et les témoignages chiffrés de membres.</p><a href="https://wa.me/" target="_blank" style="display:inline-block;padding:8px 18px;border-radius:8px;border:1px solid rgba(37,211,102,0.4);background:rgba(37,211,102,0.1);color:#25D366;font-size:13px;font-weight:600;text-decoration:none">💬 Rejoindre la communauté</a></div></div>
+      <div style="padding:24px;border-radius:14px;background:var(--surface);border:1px solid var(--border);display:flex;gap:20px;align-items:center"><div style="font-size:36px">📋</div><div style="flex:1"><h3 style="font-size:14px;font-weight:700;margin-bottom:4px;color:#60A5FA">ÉTAPE #3</h3><p style="font-size:13px;color:var(--muted)">À la fin de la présentation, tu auras la possibilité de réserver un appel stratégique gratuit de 30 minutes avec Samir pour analyser ton projet et identifier les meilleures opportunités selon ton profil.</p></div></div>
+    </div>
+  </section>
+</div>
+
+<div id="stepIndicator" style="position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;padding:8px 16px;border-radius:100px;background:rgba(11,11,13,0.9);backdrop-filter:blur(12px);border:1px solid var(--border);z-index:200">
+  <div class="s-dot active" data-step="optin"></div>
+  <div class="s-dot" data-step="vsl"></div>
+  <div class="s-dot" data-step="booking"></div>
+  <div class="s-dot" data-step="confirmation"></div>
+</div>
+
+
+
+<footer style="padding:24px;border-top:1px solid var(--border);text-align:center">
+    <p style="font-size:11px;color:var(--muted);opacity:0.6">© 2026  — Tous droits réservés</p>
+    <p style="font-size:10px;color:var(--muted);opacity:0.4;margin-top:6px">Produit par OPERO</p>
+  </footer>
+
+<script>
+(function(){
+  const STEPS = ['optin','vsl','booking','confirmation'];
+  let userPrenom = '';
+  let vslStarted = false;
+
+  window.openOperoModal = function(){ document.getElementById('operoFormModal').classList.add('open'); document.body.style.overflow='hidden'; };
+  window.closeOperoModal = function(){ document.getElementById('operoFormModal').classList.remove('open'); document.body.style.overflow=''; };
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeOperoModal(); });
+
+  window.goToStep = function(stepId){
+    document.querySelectorAll('.t3-step').forEach(function(s){ s.classList.remove('active'); });
+    const t = document.getElementById('step-'+stepId); if (t) t.classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+    STEPS.forEach(function(s,i){
+      const d = document.querySelector('.s-dot[data-step="'+s+'"]');
+      if (!d) return;
+      d.classList.toggle('active', s === stepId);
+      d.classList.toggle('done', STEPS.indexOf(stepId) > i);
+    });
+    const nav = document.getElementById('navCta');
+    if (nav) nav.style.display = 'none';
+    if (stepId === 'vsl') onEnterVsl();
+    if (stepId === 'confirmation') onEnterConfirmation();
+  };
+
+  
+  window.operoSubmitLead = function(data){
+    data = data || {};
+    var payload = {
+      clientSlug: "Samir Tajine Business",
+      email: data.email || '',
+      prenom: data.prenom || '',
+      nom: data.nom || '',
+      phone: data.phone || '',
+      source: "Tunnel Miniature — Tajine Business",
+      segmentName: data.segmentName || '',
+      tagSource: "",
+      rawData: data.rawData || null
+    };
+    var url = "https://mljpxzpovrjceibzevwa.supabase.co/functions/v1/lead-ingest";
+    var anon = "sb_publishable_-GQb7ksP4eajkzXRCiSAjw_3gi4YJ1w";
+    var hasIngest = !!(url && payload.clientSlug && payload.email);
+    // HTTP ingest (prod — landing déployée publiquement OU preview)
+    if (hasIngest) {
+      try {
+        fetch(url, {
+          method: 'POST',
+          headers: (function(h){ h['Content-Type']='application/json'; if (anon){h['apikey']=anon; h['Authorization']='Bearer '+anon;} return h; })({}),
+          body: JSON.stringify(payload),
+          keepalive: true
+        }).catch(function(){ /* silencieux — la postMessage sert de fallback si HTTP échoue */ });
+      } catch(e){}
+    }
+    // postMessage : toujours émis vers le parent si on est en iframe.
+    // Le flag viaSupabase=true évite que le parent duplique le lead en
+    // localStorage quand l'HTTP ingest est déjà configuré — il sert juste
+    // de notification UI instantanée.
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({
+          type: 'opero:lead-submit',
+          source: payload.source,
+          data: payload,
+          viaSupabase: hasIngest
+        }, '*');
+      }
+    } catch(e){}
+  };
+
+  window.submitOperoOptin = function(){
+    const p = document.getElementById('operoPrenom')?.value || '';
+    const e = document.getElementById('operoEmail')?.value || '';
+    const ph = document.getElementById('operoPhone')?.value || '';
+    if (!e && !document.querySelector('[data-embed]')) { alert('Email requis'); return; }
+    userPrenom = p;
+    window.operoSubmitLead({ prenom:p, email:e, phone:ph });
+    if (typeof fbq !== 'undefined') fbq('track','Lead');
+    closeOperoModal();
+    goToStep('vsl');
+  };
+
+  function onEnterVsl(){
+    const g = document.getElementById('greetingLine');
+    if (g && userPrenom) g.textContent = userPrenom + ', ta masterclass est prête';
+    if (vslStarted) return;
+    vslStarted = true;
+    setTimeout(function(){
+      const cta = document.getElementById('videoCta');
+      if (cta) { cta.style.display='block'; cta.style.animation='fadeUp 0.8s forwards'; }
+      const nav = document.getElementById('navCta');
+      if (nav) { nav.style.display='inline-flex'; nav.style.animation='slideIn 0.6s forwards'; }
+      if (typeof fbq !== 'undefined') fbq('track','ViewContent');
+    }, 8000);
+  }
+  function onEnterConfirmation(){
+    const g = document.getElementById('confirmGreeting');
+    if (g && userPrenom) g.textContent = userPrenom + ', ';
+    if (typeof fbq !== 'undefined') fbq('track','CompleteRegistration');
+  }
+
+  window.addEventListener('message', function(e){
+    if (e.data && e.data.event === 'calendly.event_scheduled') {
+      if (typeof fbq !== 'undefined') fbq('track','Schedule');
+      setTimeout(function(){ goToStep('confirmation'); }, 1500);
+    }
+  });
+
+  try {
+    const obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) en.target.classList.add('visible'); });
+    }, { threshold:0.1 });
+    document.querySelectorAll('.animate').forEach(function(el){ obs.observe(el); });
+  } catch(e){}
+})();
+</script>
+</body>
+</html>
